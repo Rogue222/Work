@@ -1,0 +1,50 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Title="Pistolik Toy Store - Login" Height="800" Width="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Source="/Resources/Снимок экрана (126).png" Height="200" Width="300" Margin="0,20,0,20" Stretch="Fill" />
+        
+
+        <StackPanel Grid.Row="1" Margin="20" HorizontalAlignment="Center">
+            <Label Content="Email:" HorizontalAlignment="Center"/>
+            <TextBox Name="EmailTextBox" Margin="0,5" Height="25" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Label Content="Password:" HorizontalAlignment="Center"/>
+            <PasswordBox Name="PasswordBox" Margin="0,5" Height="25" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <CheckBox Name="RememberMeCheckBox" Content="Запомнить меня" Margin="0,10" HorizontalAlignment="Center"/>
+            <Button Name="LoginButton" Content="Войти" Margin="0,10" Width="80" Height="25" HorizontalAlignment="Center" Click="LoginButton_Click_1">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="Turquoise"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border CornerRadius="8" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button Name="ForgotPasswordText" Content="Забыли пароль?" Margin="0,10" Foreground="Blue" Cursor="Hand" HorizontalAlignment="Center" MouseLeftButtonDown="ForgotPasswordText_MouseLeftButtonDown" BorderBrush="{x:Null}" Background="{x:Null}" Click="ForgotPasswordText_Click"/>
+        </StackPanel>
+
+        <Button Grid.Row="6" Content="Регистрация" Margin="0,20,0,10" HorizontalAlignment="Center" Foreground="Blue" Cursor="Hand" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" BorderBrush="{x:Null}" Background="{x:Null}" Click="Button_Click"/>
+    </Grid>
+</Window>
