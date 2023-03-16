@@ -29,25 +29,10 @@ namespace WpfApp5.View.Windows
 		{
 			if (!(string.IsNullOrEmpty(EmailTextBox.Text) || string.IsNullOrEmpty(PasswordBox.Password) || string.IsNullOrEmpty(ConfirmPasswordBox.Password)))
 			{
-				//if (PasswordPb.Password == RepeatedPasswordPb.Password)
-				//{
-
-				//}
-				//if ()
-				//{
-				//    MessageBox.Show("Вы успешно зарегистрированы");
-				//    AuthentificationWindow authentificationWindow = new AuthentificationWindow();
-				//    authentificationWindow.Show();
-				//    Close();
-				//}
-				//switch ()
-				//{
-
-				//}
-				var logPass = App.context.Admins.FirstOrDefault(i => i.Login == EmailTextBox.Text);
+				var logPass = App.context.Clients.FirstOrDefault(i => i.Email == EmailTextBox.Text);
 				if (logPass != null)
 				{
-					MessageBox.Show("Пользователь с таким логином уже существует");
+					MessageBox.Show("Пользователь с такой почтой уже существует");
 				}
 				else
 				{
@@ -82,12 +67,19 @@ namespace WpfApp5.View.Windows
 		}
 		private void AddUser()
 		{
-			Admins admins = new Admins()
+			Clients clients = new Clients()
 			{
-				Login = EmailTextBox.Text,
-				Password = ConfirmPasswordBox.Password
+				Email = EmailTextBox.Text,
+				Password = ConfirmPasswordBox.Password,
+				Name = NameTextBox.Text,
+				Sername = SernameTextBox.Text,
+				PhoneNumber = PhoneNumber.Text,
+
+			
+				
+				
 			};
-			App.context.Admins.Add(admins);
+			App.context.Clients.Add(clients);
 			App.context.SaveChanges();
 			MessageBox.Show("Вы успешно зарегистрированы");
 		}

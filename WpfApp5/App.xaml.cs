@@ -14,6 +14,6 @@ namespace WpfApp5
 	/// </summary>
 	public partial class App : Application
 	{
-		public static modelEntities context = new modelEntities();
+		public static TestEntities context = new TestEntities();
 	}
 }

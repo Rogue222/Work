@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3b83aa002bad4b8689c4b8ab813fb82d" Name="Diagram1">
+        <EntityTypeShape EntityType="TestModel.Admins" Width="1.5" PointX="5.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestModel.Checks" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestModel.Clients" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestModel.Dishes" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestModel.DishTypes" Width="1.5" PointX="1.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestModel.Orders" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestModel.PaymentMethods" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestModel.Records" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestModel.Statuses" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestModel.Tables" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <AssociationConnector Association="TestModel.FK_Checks_PaymentMethods" ManuallyRouted="false" />
+        <AssociationConnector Association="TestModel.FK_Checks_Records" ManuallyRouted="false" />
+        <AssociationConnector Association="TestModel.FK_Checks_Statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="TestModel.FK_Orders_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="TestModel.FK_Records_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="TestModel.FK_Dishes_DishTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="TestModel.FK_Orders_Dishes" ManuallyRouted="false" />
+        <AssociationConnector Association="TestModel.FK_Records_Tables" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
