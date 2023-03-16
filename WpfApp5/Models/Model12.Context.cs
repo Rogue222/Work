@@ -13,10 +13,10 @@ namespace WpfApp5.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class modelEntities : DbContext
+    public partial class TestEntities : DbContext
     {
-        public modelEntities()
-            : base("name=modelEntities")
+        public TestEntities()
+            : base("name=TestEntities")
         {
         }
     

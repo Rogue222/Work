@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp5.View.Windows;
-using NavigationWindow = WpfApp5.View.Windows.NavigationWindow;
+
 
 namespace WpfApp5
 {
@@ -31,11 +31,11 @@ namespace WpfApp5
 		{
 			if (!(string.IsNullOrEmpty(EmailTextBox.Text) || string.IsNullOrEmpty(PasswordBox.Password)))
 			{
-				if (App.context.Admins.First(i => i.Login == EmailTextBox.Text && i.Password == PasswordBox.Password) != null)
+				if (App.context.Clients.First(i => i.Email == EmailTextBox.Text && i.Password == PasswordBox.Password) != null)
 				{
-					NavigationWindow navigationWindow = new NavigationWindow();
+					Profile profile = new Profile();
 					MessageBox.Show("Вы вошли");
-					navigationWindow.Show();
+					profile.Show();
 					Close();
 				}
 				else
